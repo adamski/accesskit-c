@@ -37,3 +37,9 @@ opt-level = "z"
 codegen-units = 1
 panic = "abort"
 debug = true
+
+[patch.crates-io]
+accesskit = { git = "https://github.com/oeksound/accesskit", branch = "unique-class-names" }
+accesskit_consumer = { git = "https://github.com/oeksound/accesskit", branch = "unique-class-names" }
+accesskit_macos = { git = "https://github.com/oeksound/accesskit", branch = "unique-class-names" }
+objc2 = { git = "https://github.com/oeksound/objc2", branch = "unique-class-names" }

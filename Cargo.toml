@@ -40,3 +40,11 @@ opt-level = "z"
 codegen-units = 1
 panic = "abort"
 debug = true
+
+# The macOS adapter registers its Objective-C classes under a unique name per
+# library copy, so several plugins can each link their own copy into one host.
+[patch.crates-io]
+accesskit = { git = "https://github.com/adamski/accesskit", branch = "unique-class-names-upstream" }
+accesskit_consumer = { git = "https://github.com/adamski/accesskit", branch = "unique-class-names-upstream" }
+accesskit_macos = { git = "https://github.com/adamski/accesskit", branch = "unique-class-names-upstream" }
+objc2 = { git = "https://github.com/adamski/objc2", branch = "unique-class-names-0.6.5" }
